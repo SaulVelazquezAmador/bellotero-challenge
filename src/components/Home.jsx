@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Configurator from './configurator/Configurator'
 import Testimonial from './testimonial/Testimonial'
 import Header from './header/Header'
+import NotFound from './Notfound/NotFound'
 
 const Home = () =>{
     const [page, setPage] = useState("page-1")
@@ -10,7 +11,7 @@ const Home = () =>{
             <Header setPage = {setPage}/>
             {
                 page === "#"
-                ? <div>gato</div>
+                ? <NotFound/>
                 : page === "page-1"
                     ? <Testimonial/>
                     : <Configurator/>
